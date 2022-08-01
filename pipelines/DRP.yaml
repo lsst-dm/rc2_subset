@@ -220,6 +220,28 @@ subsets:
       The multiVisit subset defined in pipe_tasks' DRP.yaml is not safe to
       use on HSC for various reasons; use 'step1', 'step2', and 'step3' subsets
       instead.  It may be re-enabled in the future.
+  singleFrame:
+    subset:
+      - isr
+      - characterizeImage
+      - calibrate
+      - writePreSourceTable
+      - transformPreSourceTable
+      - consolidatePreSourceTable
+      - consolidateVisitSummary
+      - skyCorr
+      - isolatedStarAssociation
+    description: >
+      Set of tasks for complete single frame processing. Analogous to
+      SingleFrameDriver.
+  source_calibration:
+    subset:
+      - finalizeCharacterization
+      - makeCcdVisitTable
+      - makeVisitTable
+      - writeRecalibratedSourceTable
+      - transformSourceTable
+      - consolidateSourceTable
   coadd_measurement:
     subset:
       - detection_tutorial
